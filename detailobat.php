@@ -150,7 +150,7 @@ if (isset($_POST['ubah'])) {
                         <td><?= $detailobat['no_resep']; ?></td>
                         <td><?= $detailobat['kode_obat']; ?></td>
                         <td><?= $detailobat['dosis']; ?></td>
-                        <td><?= $detailobat['sub_total']; ?></td>
+                        <td>RP.<?= $detailobat['sub_total']; ?></td>
 
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic outlined example">

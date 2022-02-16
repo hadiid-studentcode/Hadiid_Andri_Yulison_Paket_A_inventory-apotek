@@ -1,4 +1,7 @@
+<!--HADIID ANDRI YULISON 200402076   -->
+<!-- index.php -->
 <?php
+// HADIID ANDRI YULISON 200402076 
 require 'koneksi.php';
 
 $obat = mysqli_query($conn, "SELECT * FROM t_obat");

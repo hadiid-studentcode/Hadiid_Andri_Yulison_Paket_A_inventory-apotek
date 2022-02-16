@@ -1,5 +1,7 @@
+<!--HADIID ANDRI YULISON 200402076   -->
+<!-- koneksi.php -->
 <?php
-
+// HADIID ANDRI YULISON 200402076 
 $server = "localhost";
 $username = "root";
 $password = "";
@@ -20,7 +22,7 @@ function query($query)
 
 function hapusobat($ko)
 {
-    
+
     global $conn;
     mysqli_query($conn, "DELETE FROM t_obat WHERE kode_obat = $ko");
 
@@ -29,14 +31,14 @@ function hapusobat($ko)
     return mysqli_affected_rows($conn);
 }
 
-function hapusdetailobat($nor){
+function hapusdetailobat($nor)
+{
     global $conn;
     mysqli_query($conn, "DELETE FROM t_detailobat WHERE no_resep = $nor");
 
 
 
     return mysqli_affected_rows($conn);
-
 }
 
 function tambahobat($data)
@@ -62,16 +64,17 @@ function tambahobat($data)
     return mysqli_affected_rows($conn);
 }
 
-function tambahdetailobat($data){
+function tambahdetailobat($data)
+{
     global $conn;
     $kode = ($data['tbhkodeobat']);
     $dosis = ($data['tbhdosisobat']);
 
 
 
-   
-    
-    $query = mysqli_query($conn,"SELECT harga,jumlah from t_obat WHERE kode_obat = '$kode'");
+
+
+    $query = mysqli_query($conn, "SELECT harga,jumlah from t_obat WHERE kode_obat = '$kode'");
     $total2 = mysqli_fetch_assoc($query);
 
     $harga = ($total2['harga']);
@@ -89,11 +92,9 @@ function tambahdetailobat($data){
 
     )";
     mysqli_query($conn, $query);
-   
+
 
     return mysqli_affected_rows($conn);
-    
-
 }
 
 function ubahobat($data)
@@ -121,7 +122,8 @@ function ubahobat($data)
     return mysqli_affected_rows($conn);
 }
 
-function ubahdetailobat($data){
+function ubahdetailobat($data)
+{
     global $conn;
     $noResep = ($data['noresep']);
     $dosis = ($data['ubhdosisobat']);
@@ -133,8 +135,7 @@ function ubahdetailobat($data){
              ";
 
     mysqli_query($conn, $query);
-  
+
 
     return mysqli_affected_rows($conn);
-   
 }

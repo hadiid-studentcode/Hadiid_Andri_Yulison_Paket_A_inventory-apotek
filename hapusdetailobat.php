@@ -1,5 +1,7 @@
+<!--HADIID ANDRI YULISON 200402076   -->
+<!-- hapusdetailobat.php -->
 <?php
-
+// HADIID ANDRI YULISON 200402076 
 require 'koneksi.php';
 
 
